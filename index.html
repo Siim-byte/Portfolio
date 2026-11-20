@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Siim Belõi — Junior Software Developer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo mono" href="#top">siim-byte<span style="color:var(--accent)"></span></a><div><a href="#about">About</a><a href="#stack">Stack</a><a href="#work">Work</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero" id="top">
+<div>
+<div class="tag mono">// Junior Software Developer · Backend focus</div>
+<h1>Backend developer building <em>reliable, maintainable</em> software.</h1>
+<p class="sub">I build SOLID-driven backends in .NET Core and cross-platform mobile apps with .NET MAUI. Focused on predictable architecture, practical automation, and shipping code that is easy to extend.</p>
+<div class="btns"><a class="btn p" href="https://github.com" target="_blank" rel="noopener">View Work (GitHub)</a><a class="btn" href="https://www.linkedin.com/in/siim-bel%C3%B5i-2b7867450/" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+<pre class="mono"><span class="c">// Dependency inversion, by default</span>
+<span class="k">public sealed class</span> <span class="t">OrderService</span>(
+    <span class="t">IOrderRepository</span> repo,
+    <span class="t">ICache</span> cache) : <span class="t">IOrderService</span>
+{
+    <span class="k">public async</span> <span class="t">Task</span>&lt;<span class="t">Order</span>?&gt; GetAsync(<span class="k">int</span> id)
+        =&gt; <span class="k">await</span> cache.GetOrAddAsync(
+            <span class="s">$"order:{id}"</span>, () =&gt; repo.FindAsync(id));
+}</pre>
+</header>
+
+<section id="about">
+<h2>Engineering approach</h2>
+<p class="lead">Systems should be easy to change, not just easy to ship.</p>
+<div class="about">
+<p>I'm a junior developer focused on writing code that others can read, test, and extend. I build on strong fundamentals in <b>SOLID principles</b>, <b>MVC</b> boundaries that separate transport, logic, and persistence, and proven <b>.NET Core patterns</b> like dependency injection, repository/unit-of-work, and clear service layers.</p>
+<p>Reliable backends matter most when they reach users, so I work across the stack—building <b>cross-platform mobile apps with .NET MAUI</b> on top of structured APIs, and using <b>Python automation</b> to eliminate repetitive workflows. I’m looking to join a team in Estonia or remotely where code quality and mentorship matter.</p>
+</div>
+</section>
+
+<section id="stack">
+<h2>Technical stack</h2>
+<p class="lead">The tools I use day to day and keep sharpening.</p>
+<div class="grid">
+<div class="card"><h3 class="mono">core backend</h3><div class="chips"><span class="chip">C#</span><span class="chip">.NET Core</span><span class="chip">EF Core</span><span class="chip">SOLID</span><span class="chip">MVC</span><span class="chip">Node.js</span><span class="chip">PHP</span></div></div>
+<div class="card"><h3 class="mono">databases &amp; caching</h3><div class="chips"><span class="chip">SQL Server</span><span class="chip">MySQL</span><span class="chip">MariaDB</span><span class="chip">Redis</span></div></div>
+<div class="card"><h3 class="mono">frontend &amp; mobile</h3><div class="chips"><span class="chip">.NET MAUI</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span></div></div>
+<div class="card"><h3 class="mono">tooling &amp; automation</h3><div class="chips"><span class="chip">Python</span><span class="chip">Git</span><span class="chip">REST APIs</span><span class="chip">Workflow automation</span></div></div>
+</div>
+</section>
+
+<section id="work">
+<h2>Featured projects</h2>
+<p class="lead">Personal and academic projects where I practice applying the stack.</p>
+<div class="proj">
+<div class="card"><h3><a href="https://github.com/Siim-byte/Filminurk_Siim_Beloi_TARpe24" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Filminurk ↗</a></h3>
+<p>A full-stack movie store and review web application built around core e-commerce business logic. Users can browse the catalog, add films to a shopping cart, complete purchases, and post ratings and reviews, backed by an admin CRUD panel.</p>
+<div class="stack mono">C# · ASP.NET Core (MVC &amp; Razor Pages) · Entity Framework Core · SQL Server · HTML5 · CSS3</div>
+<div class="hl"><span class="mono">Key architectural highlight</span>Combines MVC controllers and Razor Pages with Entity Framework Core to keep data persistence, domain models, and presentation separated.</div></div>
+
+<div class="card"><h3><a href="https://github.com/siim-byte/Retseptiraamat" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Retseptiraamat ↗</a></h3>
+<p>A cross-platform mobile recipe manager where users can create, browse, and organize their personal recipe lists. Focused on predictable state handling, intuitive navigation, and responsive mobile layouts.</p>
+<div class="stack mono">C# · .NET MAUI · Programmatic C# UI</div>
+<div class="hl"><span class="mono">Key architectural highlight</span>Built the user interface directly in C# code without XAML, keeping UI composition strongly typed, modular, and easy to refactor.</div></div>
+
+<div class="card"><h3>Workflow Automation Tool <span class="mono" style="font-size:0.75em;opacity:0.75">[In Progress]</span></h3>
+<p>Currently building a Python tool to automate repetitive multi-step workflows and integrate with an existing PHP application. Designing rule-based validation to control execution alongside automated classification steps.</p>
+<div class="stack mono">Python · PHP (legacy integration) · MySQL · Automation scripts</div>
+<div class="hl"><span class="mono">Target architecture</span>An adapter layer wrapping the legacy PHP system behind a structured interface to allow incremental modernization without a full rewrite.</div></div>
+
+</section>
+</div>
+
+<footer id="contact"><div class="wrap">
+<h2>Let's build something solid.</h2>
+<p>Open to junior developer roles, internships, and collaboration on backend or .NET MAUI projects. Reach out on LinkedIn or check out my code on GitHub.</p>
+<div class="btns" style="justify-content:center">
+  <a class="btn p" href="https://www.linkedin.com/in/siim-bel%C3%B5i-2b7867450/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  <a class="btn" href="https://github.com/siim-byte" target="_blank" rel="noopener">GitHub</a>
+</div>
+<div class="fine mono">© Siim Belõi · C# · .NET Core · Python · TypeScript</div>
+</div></footer>
+</body>
+</html>
