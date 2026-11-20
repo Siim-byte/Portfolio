@@ -17,15 +17,16 @@
 <p class="sub">I build SOLID-driven backends in .NET Core and cross-platform mobile apps with .NET MAUI. Focused on predictable architecture, practical automation, and shipping code that is easy to extend.</p>
 <div class="btns"><a class="btn p" href="https://github.com" target="_blank" rel="noopener">View Work (GitHub)</a><a class="btn" href="https://www.linkedin.com/in/siim-bel%C3%B5i-2b7867450/" target="_blank" rel="noopener">LinkedIn</a></div>
 </div>
-<pre class="mono"><span class="c">// Dependency inversion, by default</span>
-<span class="k">public sealed class</span> <span class="t">OrderService</span>(
-    <span class="t">IOrderRepository</span> repo,
-    <span class="t">ICache</span> cache) : <span class="t">IOrderService</span>
+<pre class="mono"><span class="c">// Developer profile · Tallinn, EE</span>
 {
-    <span class="k">public async</span> <span class="t">Task</span>&lt;<span class="t">Order</span>?&gt; GetAsync(<span class="k">int</span> id)
-        =&gt; <span class="k">await</span> cache.GetOrAddAsync(
-            <span class="s">$"order:{id}"</span>, () =&gt; repo.FindAsync(id));
+  <span class="k">"role"</span>: <span class="s">"Junior Backend Developer"</span>,
+  <span class="k">"primary_stack"</span>: [<span class="s">"C#"</span>, <span class="s">".NET Core"</span>, <span class="s">"SQL"</span>],
+  <span class="k">"secondary"</span>: [<span class="s">".NET MAUI"</span>, <span class="s">"Python"</span>],
+  <span class="k">"focus"</span>: <span class="s">"Clean architecture &amp; APIs"</span>,
+  <span class="k">"location"</span>: <span class="s">"Tallinn / Remote"</span>,
+  <span class="k">"status"</span>: <span class="t">"Open to roles &amp; internships"</span>
 }</pre>
+
 </header>
 
 <section id="about">
